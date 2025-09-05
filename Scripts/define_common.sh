@@ -19,9 +19,6 @@ archive_branch="archive_translations"
 translation_branch="translations"
 target_loopworkspace_branch="dev"
 
-translation_branch="convert_to_xcstrings"
-
-
 # define the languages used by the translation scripts
 # matches lokalise order, en plus alphabetical order by language name in English
 LANGUAGES=(en \
