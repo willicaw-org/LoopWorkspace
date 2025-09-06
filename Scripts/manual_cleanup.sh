@@ -9,25 +9,25 @@
 set -e
 set -u
 
+source Scripts/define_common.sh
+
+section_divider
+echo "You are running ${0}"
+echo "  Be sure you are completely done with the translation process"
+echo "  or that you want to discard all your work to date"
+echo
 echo " /////////// WARNING ///////////"
-echo "Be sure you are completely done with the translations process or"
-echo " that you want to discard all your work to date"
+echo
 echo " This deletes the xclocs, xliff_in, xliff_out folders"
-echo " This deletes the standard title for the PRs for submodules and LoopWorkspace"
-echo ""
-echo "Enter y return to continue, any other key to quit"
-read query
-echo ""
+echo " This deletes the file, ${MESSAGE_FILE}, with the lokalise download timestamp"
 
-if [[ ${query} == "y" ]]; then
+continue_or_quit ${0}
 
-    rm -rf xclocs
-    rm -rf xliff_in
-    rm -rf xliff_out
-    rm "${message_file}"
-    echo "Temporary folders and ${message_file} removed from LoopWorkspace"
+rm -rf xclocs
+rm -rf xliff_in
+rm -rf xliff_out
+rm "${MESSAGE_FILE}"
 
-else
-    echo "Exited without deleting folders and files"
-
-fi
+section_divider
+echo "Temporary folders and ${MESSAGE_FILE} removed from LoopWorkspace"
+section_divider

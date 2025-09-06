@@ -2,7 +2,7 @@
 
 source Scripts/define_common.sh
 
-for project in ${projects}; do
+for project in ${PROJECTS}; do
   echo "Updating to $project"
   IFS=":" read user dir branch <<< "$project"
   echo "Updating to $branch on $user/$project"
