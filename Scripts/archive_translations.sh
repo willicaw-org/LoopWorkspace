@@ -38,4 +38,3 @@ git submodule update
 git status
 
 echo "You may need to manually clean branches not in the project list"
-

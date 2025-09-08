@@ -12,4 +12,3 @@ for project in ${PROJECTS}; do
   git pull
   cd -
 done
-
