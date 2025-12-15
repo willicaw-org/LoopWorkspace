@@ -228,10 +228,8 @@ jobs:
           negative_insulin \
           basal_lock
           
-          export SCRIPT_BRANCH=prelim_ai_food && \
-          export PATCH_BRANCH=prelim_ai_food && \
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
-
+          export SCRIPT_BRANCH=prelim_ai_food && export PATCH_BRANCH=prelim_ai_food && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/loopandlearn/lnl-scripts/$SCRIPT_BRANCH/CustomizationSelect.sh)" food_search
+          
           # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line  
           echo "Downloading code to support xdrip-client-swift"
